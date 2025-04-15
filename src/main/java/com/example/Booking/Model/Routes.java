@@ -9,18 +9,20 @@ import java.math.BigDecimal;
 public class Routes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     private String departure_province;
     private String departure_district;
     private String destination_province;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getDeparture_province() {
         return departure_province;
