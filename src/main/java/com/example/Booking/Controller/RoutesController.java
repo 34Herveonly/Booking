@@ -13,7 +13,7 @@ public class RoutesController {
     private RoutesService routesService;
 
     @PostMapping("/Save")
-    public String saveSelectedRoutes(@RequestParam("routes") Routes routes){
+    public String saveSelectedRoutes(@RequestBody Routes routes){
         routesService.saveUserSelectedRoutes(routes);
         return "Saved to the database";
     }
