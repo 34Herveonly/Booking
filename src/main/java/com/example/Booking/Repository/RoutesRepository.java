@@ -1,10 +1,10 @@
 package com.example.Booking.Repository;
 
-import com.example.Booking.Model.Routes;
+import com.example.Booking.Model.Route;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RoutesRepository extends JpaRepository<Routes, Long> {
+public interface RoutesRepository extends JpaRepository<Route, Long> {
 
 }
