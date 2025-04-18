@@ -1,5 +1,6 @@
 package com.example.Booking.Model;
 
+import com.example.Booking.Repository.RoutesRepository;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.math.BigDecimal;
@@ -21,9 +22,9 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "route_id")
-    private Routes route;
+
+    @Column(name = "route_id")
+    private Long routeId;
 
     @OneToOne(mappedBy = "ticket", cascade = CascadeType.ALL, orphanRemoval = true)
     private PaymentInformation paymentInformation;

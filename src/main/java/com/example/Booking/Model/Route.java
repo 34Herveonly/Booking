@@ -5,10 +5,10 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.util.List;
 
-@Entity
 @Data
-@Table(name = "user_selected_routes")
-public class Routes {
+@Table(name = "routes")
+@Entity
+public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,7 +19,6 @@ public class Routes {
     private String destinationDistrict;
     private BigDecimal price;
 
-    // OneToMany relationship with Ticket (optional)
-    @OneToMany(mappedBy = "route")
+    @OneToMany(mappedBy = "route", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Ticket> tickets;
 }

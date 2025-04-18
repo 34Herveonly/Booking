@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "payments")
+@Table(name = "payment_information")
 public class PaymentInformation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class PaymentInformation {
     private boolean status;
     private BigDecimal amount;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne
     @JoinColumn(name = "ticket_id")
     private Ticket ticket;
 }
