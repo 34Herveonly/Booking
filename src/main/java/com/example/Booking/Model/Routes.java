@@ -3,13 +3,45 @@ package com.example.Booking.Model;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
+import java.sql.Date;
+import java.util.UUID;
 
 @Entity
-@Table(name = "user_input_routes")
+@Table(name = "Ticket_information")
 public class Routes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String clientName;
+
+    public PaymentStatus getPaymentStatus() {
+        return paymentStatus;
+    }
+
+    public void setPaymentStatus(PaymentStatus paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    private PaymentStatus paymentStatus;
+
+
+
+
+
+    public enum PaymentStatus {
+        NOT_PAID,
+        PAID
+    }
+
 
     public Long getId() {
         return id;
