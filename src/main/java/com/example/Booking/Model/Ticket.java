@@ -26,10 +26,6 @@ public class Ticket {
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
-
-    @Column(name = "route_id")
-    private Long routeId;
-
     @OneToOne(mappedBy = "ticket", cascade = CascadeType.ALL, orphanRemoval = true)
     private PaymentInformation paymentInformation;
 
