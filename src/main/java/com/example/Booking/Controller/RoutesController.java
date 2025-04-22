@@ -1,6 +1,6 @@
 package com.example.Booking.Controller;
 
-import com.example.Booking.Model.Routes;
+import com.example.Booking.Model.Route;
 import com.example.Booking.Service.RoutesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ public class RoutesController {
     private RoutesService routesService;
 
     @PostMapping("/Save")
-    public String saveSelectedRoutes(@RequestBody Routes routes){
+    public String saveSelectedRoutes(@RequestBody Route routes){
         routesService.saveUserSelectedRoutes(routes);
         return "Saved to the database";
     }

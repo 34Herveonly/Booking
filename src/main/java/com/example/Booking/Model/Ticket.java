@@ -19,6 +19,10 @@ public class Ticket {
     private LocalDateTime ticketDate;
     private BigDecimal paidAmount;
 
+    public void setPaymentStatus(PaymentStatus paymentStatus) {
+        this.paymentStatus = paymentStatus;
+    }
+
     @Enumerated(EnumType.STRING)
     private PaymentStatus paymentStatus;
 
