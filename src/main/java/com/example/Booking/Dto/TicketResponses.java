@@ -1,4 +1,4 @@
-package com.example.Booking.Model;
+package com.example.Booking.Dto;
 
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -17,3 +17,4 @@ public class TicketResponses {
     private String sessionId;
     private String sessionUrl;
 }
+
