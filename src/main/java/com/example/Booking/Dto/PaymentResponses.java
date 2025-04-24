@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Table(name = "Ticket_Responses")
-public class TicketResponses {
+public class PaymentResponses {
     private String message;
     private String status;
     private String sessionId;
