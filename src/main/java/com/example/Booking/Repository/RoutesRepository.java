@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface RoutesRepository extends JpaRepository<Route, Long> {
-
+    // Add custom query methods if needed
 }
