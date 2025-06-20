@@ -19,7 +19,10 @@ public class RoutesService {
     @Transactional
     public Route saveUserSelectedRoutes(Route route) {
         if (route.getDepartureProvince() == null || route.getDestinationProvince() == null) {
-            throw new IllegalArgumentException("Departure and destination provinces cannot be null");
+            throw new IllegalArgumentException("Departure/destination province cannot be null");
+        }
+        else if (route.getDepartureDistrict()==null || route.getDestinationDistrict() == null) {
+            throw new IllegalArgumentException("Departure/destination district cannot be null");
         }
         return routesRepository.save(route);
     }
