@@ -25,5 +25,7 @@ public class RoutesService {
             throw new IllegalArgumentException("Departure/destination district cannot be null");
         }
         return routesRepository.save(route);
+
     }
+
 }
