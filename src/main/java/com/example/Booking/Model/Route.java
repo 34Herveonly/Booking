@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name = "user_selected_routes")
+
 public class Route {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,4 +51,5 @@ public class Route {
 
     @Column(nullable = false)
     private BigDecimal price;
+
 }
