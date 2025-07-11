@@ -27,4 +27,8 @@ public class RoutesController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error saving route");
         }
     }
+    @GetMapping("/test")
+    public String TestApi(){
+        return "Api working smoothly";
+    }
 }
