@@ -7,7 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/Routes")
+@RequestMapping("/routes")
+@CrossOrigin(origins = "*")
 public class RoutesController {
 
     private final RoutesService routesService;
@@ -16,7 +17,7 @@ public class RoutesController {
         this.routesService = routesService;
     }
 
-    @PostMapping("/Save")
+    @PostMapping("/save")
     public ResponseEntity<?> saveSelectedRoutes(@RequestBody Route route) {
         try {
             Route savedRoute = routesService.saveUserSelectedRoutes(route);
