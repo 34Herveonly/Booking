@@ -1,0 +1,15 @@
+{
+  "userId": "user123",
+  "passengerName": "John Doe",
+  "passengerEmail": "john.doe@example.com",
+  "passengerPhone": "+250781234567",
+  "departureProvince": "Kigali City",
+  "departureDistrict": "Gasabo",
+  "destinationProvince": "Eastern Province",
+  "destinationDistrict": "Rwamagana",
+  "travelDate": "2024-11-20T10:00:00",
+  "price": 1500,
+  "numberOfPassengers": 2,
+  "seatNumbers": "A1, A2",
+  "vehicleInfo": "Bus - Kigali Express"
+}
